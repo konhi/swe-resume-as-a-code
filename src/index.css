@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply bg-black p-8 flex justify-center min-h-screen;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    @apply w-full flex justify-center;
+  }
+
+  a {
+    @apply underline;
+  }
+}
+
+@layer utilities {
+  .resume-bullet li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm 20mm 0 20mm;
+    background: black;
+  }
+
+  html {
+    color-scheme: dark;
+    background: black !important;
+  }
+
+  body {
+    background: black !important;
+    padding: 0;
+  }
+  
+  .resume-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+}
