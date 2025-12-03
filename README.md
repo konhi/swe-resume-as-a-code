@@ -8,7 +8,7 @@
 ## 🚀 Quick Start
 
 ```bash
-gh repo clone konhi/modern-resume-as-a-code
+gh repo clone konhi/swe-resume-as-a-code
 pnpm install
 pnpm dev
 pnpm pdf
